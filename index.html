@@ -1,93 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Bright Star Athletes</title>
+<title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
-.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
-.fa-anchor,.fa-coffee {font-size:200px}
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
 </style>
 </head>
 <body>
 
-<!-- Navbar -->
-<!-- Navigation Bar -->
-<div class="w3-bar w3-white w3-large">
-  <a href="#" class="w3-bar-item w3-button w3-red w3-mobile"><i class="fa fa-solid fa-star w3-margin-right"></i>Bright Star Athletes<a>
-</div>
-
-<!-- Header -->
-<header class="w3-display-continer w3-content w3-center" style="max-width:1500px;">
-   <img class="w3-image" src="img3.jpg" alt="The Hotel" style="min-width:1000px" width="50%" height="50%" />
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
 </header>
 
-<!-- First Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
-      <h1>Our Mission</h1>
-      <h5 class="w3-padding-32">To help Middle Tennessee children in need realize their sports dreams. No child should told they are unable to play the sport they love because of an inability to pay. Whether it be registration or equipment costs, we are here to ensure that no child is left behind. </h5>
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-      <p class="w3-text-grey"></p>
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Brite Star</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Foundation</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="img1.jpg" style="width:100%">
+      <img src="img2.jpg" style="width:100%">
     </div>
 
-    <div class="w3-third w3-center">
-	    <img class="w3-image w3-padding-64 w3-text-red w3-margin-left" src="img1.jpg" width="120%" height="120%"></img>
+    <div class="w3-half">
+      <img src="img3.jpg" style="width:100%">
+      <img src="img2.jpg" style="width:100%">
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Services.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>We are a Middle Tennessee non-profit organization here to help children in need realize their sports dreams!</p>
+    <p>
+    Every child should have the opportunity to play the sport they love, with the correct equipment. Here at Brite Star we are dedicated to helping children in need, get the equipment they need.
+    </p>
+  </div>
+
+  <!-- Story -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Our Story.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>
+		As a child my dream was to play football. However, I didn't have the proper shoes or equipment to play. Joe Boner was the owner of Brite Star Shell gas station in Smyrna Tennessee. One day while hanging out at Mr. Boner's gas station, I told him that I wanted to play football. He responded, "Why don't you?" I told him that "I didn't have the stuff I needed to play." He simply responded, "If you want to play, I will pay for whatever you need." His generosity is something I will never forget. Here at Brite Star we are aiming to do for others as Mr. Boner did for me that day.
+    </p>
+  </div>
+
+  <!-- Designers -->
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Our Board Members</b></h1>
+  </div>
+
+  <!-- The Team -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="/w3images/team2.jpg" style="width:100%">
+        <div class="w3-container">
+          <h3>Spencer Sellars</h3>
+          <p class="w3-opacity">Founder</p>
+          <p>Email: temp@gmail.com</p>
+          <p>Phone: 615-804-3643</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="/w3images/team1.jpg" style="width:100%">
+        <div class="w3-container">
+          <h3>Daniel Sellars</h3>
+          <p class="w3-opacity">Title Here</p>
+          <p>Email: temp@gmail.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="/w3images/team3.jpg" style="width:100%">
+        <div class="w3-container">
+          <h3>Kelly Sellars</h3>
+          <p class="w3-opacity">Title Here</p>
+          <p>Email: temp@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	<div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="/w3images/team2.jpg" style="width:100%">
+        <div class="w3-container">
+          <h3>Lee Carter</h3>
+          <p class="w3-opacity">Title Here</p>
+          <p>Email: temp@gmail.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="/w3images/team1.jpg" style="width:100%">
+        <div class="w3-container">
+          <h3>Mike Spain</h3>
+          <p class="w3-opacity">Title Here</p>
+          <p>Email: temp@gmail.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="/w3images/team3.jpg" style="width:100%">
+        <div class="w3-container">
+          <h3>Brian Gulotta</h3>
+          <p class="w3-opacity">Title Here</p>
+          <p>Email: temp@gmail.com</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- Second Grid -->
-<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
-      <h1>Our Story</h1>
-      <h5 class="w3-padding-32">Fill in Mamaw's text here ;)</h5>
-
-      <p class="w3-text-grey"></p>
-    </div>
-    <div class="w3-third w3-center">
-    <img class="w3-image w3-padding-64 w3-text-red w3-margin-left" src="img2.jpg" width="120%" height="120%"></img>
-    </div>
-  </div>
-</div>
-
-<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <h1 class="w3-margin w3-xlarge">Contact Us:</h1>
-    <h3 class="w3-margin w3-large">Email: brightstarathletes@gmail.com</h3>
-</div>
-
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
-  <div class="w3-xlarge w3-padding-32">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
- </div>
- <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer>
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
 
 <script>
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
 }
 </script>
 
 </body>
 </html>
-
